@@ -1,0 +1,26 @@
+{
+  "name": "fe37-onl_activebox",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latirenity/FE37-onl_ActiveBox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/latirenity/FE37-onl_ActiveBox/issues"
+  },
+  "homepage": "https://github.com/latirenity/FE37-onl_ActiveBox#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
