@@ -1,0 +1,115 @@
+.activebox {
+	position: relative;
+	background: url(../assets/img/main/main_background.png) no-repeat center/cover;
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: #252B49;
+		opacity: 0.8;
+	}
+	.activebox-content {
+		position: relative;
+		padding: 130px 0 120px 0;
+
+		@media (max-width: 1200px) {
+			padding: 157px 0 126px 0;
+		}
+
+		@media (max-width: 768px) {
+			padding: 69px 0 52px 0;
+		}
+
+		&_title h1 {
+			color: $white;
+			text-align: center;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 64px;
+			line-height: 75px;
+			text-transform: uppercase;
+			padding-bottom: 32px;
+
+			@media (max-width: 1200px) {
+				font-weight: 900;
+				font-size: 48px;
+				line-height: 56px;
+				padding-bottom: 62px;
+			}
+
+			@media (max-width: 768px) {
+				font-weight: 900;
+				font-size: 36px;
+				line-height: 42px;
+				padding-bottom: 33px;
+			}
+		}
+
+		&_caption {
+			color: $white;
+			text-align: center;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 28px;
+			padding-bottom: 82px;
+
+			@media (max-width: 1200px) {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				padding-bottom: 92px;
+			}
+
+			@media (max-width: 768px) {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				padding-bottom: 52px;
+			}
+		}
+
+		&_button {
+			margin: 0 auto;
+			max-width: 370px;
+			background: $bg-red;
+			text-align: center;
+
+			@media (max-width: 1200px) {
+				max-width: 314px;
+			}
+
+			@media (max-width: 768px) {
+				max-width: 280px;
+			}
+
+			& a {
+				display: block;
+				color: $white;
+				font-style: normal;
+				font-weight: 900;
+				font-size: 24px;
+				line-height: 28px;
+				padding: 26px 0;
+				transition: 0.3s;
+
+				&:hover {
+					background: $bg-darkred;
+				}
+
+				&:active {
+					background: $bg-red;
+					box-shadow: 4px 4px 30px #FF4343;
+				}
+
+				@media (max-width: 768px) {
+					padding: 16px 0;
+				}
+			}
+		}
+	}
+}
+
+

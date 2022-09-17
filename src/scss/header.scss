@@ -2,20 +2,27 @@
 	display: flex;
 	position: relative;
 	justify-content: space-between;
-	background: black;
 
 	&:before {
 		position: absolute;
 		content: "";
 		width: 100%;
 		height: 1px;
-		background: #BABBC5;
+		background: $ba-silver;
 		bottom: 0px;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&-logo {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: 768px) {
+			padding-top: 22px;
+		}
 
 		& a {
 			display: flex;
@@ -25,8 +32,8 @@
 	}
 
 	&-nav {
-		max-width: 670px;
 		display: block;
+		max-width: 670px;
 
 		&_list {
 			display: flex;
@@ -34,6 +41,7 @@
 		}
 
 		&_item a {
+			position: relative;
 			display: block;
 			color: $white;
 			padding: 44px 0;
@@ -43,29 +51,39 @@
 			font-weight: 700;
 			font-size: 13px;
 			line-height: 15px;
+			text-transform: uppercase;
+			transition: 0.3s;
+
+			@media (max-width: 1200px) {
+				width: 112px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+
+			// BURGER
+			@media (max-width: 768px) {
+				display: none;
+			}
+
+			&:hover:before {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 3px;
+				background: #BABBC5;
+				bottom: 0;
+				left: 0;
+			}
+
+			&:active {
+				color: $red;
+			}
+
+			&:active:before {
+				background: $ba-red;
+				transition: 0.3s;
+			}
 		}
 	}
 }
-
-// .header-logo {
-// 	display: flex;
-// }
-
-// .header-logo a {
-// 	display: flex;
-// }
-
-// .header-nav {
-// 	max-width: 670px;
-// }
-
-// .header-nav_list {
-// display: flex;
-// }
-
-// .header-nav_item a {
-// 	display: block;
-// 	color: $white;
-// 	padding: 44px ;
-// 	width: 134px;
-// }
