@@ -1,7 +1,11 @@
 // FONT COLOR
 $white: #FFFFFF;
+$lightred: #FF4343;
 $red: #E71414;
 $silver: #6C7279;
+$copyright: #808080;
+$black: #2D3033;
+
 
 // FONT-SIZE
 
@@ -18,6 +22,16 @@ $ba-red: #E71414;
 
 
 // BACKGROUND COLOR
+$bg-footer: #353C65;
+$bg-copyright: #2C3154;
 $bg-darkblue: #252B49;
 $bg-red: #FF4343;
 $bg-darkred: #E71414;
+$bg-basil: #5C3249;
+$bg-white: #FFFFFF;
+
+// HOVER ON LINKS
+@mixin link-hover ($tr, $fl) {
+	transform: scale($tr);
+	fill: $fl;
+}

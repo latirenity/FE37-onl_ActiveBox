@@ -1,0 +1,67 @@
+
+
+.projects {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	max-width: 1510px;
+	margin: 0 auto;
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	&-img {
+		max-width: 378px;
+		max-height: 340px;
+		position: relative;
+		overflow: hidden;
+		padding: 1px;
+		transition: 0.3s;
+
+		& img{
+			width: 100%;
+			height: 100%;
+			transition: 0.3s;
+		}
+
+
+		&:hover:before {
+			position: absolute;
+			content: "PROJECT NAME";
+			padding-top: 128px;
+			text-align: center;
+			color: $white;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 24px;
+			line-height: 28px;
+			background: rgba(255, 67, 67, 0.8);
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		&:hover:after {
+			position: absolute;
+			content: "User Interface Design";
+			text-align: center;
+			padding-top: 191px;
+			color: $white;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 21px;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			cursor: pointer;
+			z-index: 1;
+		}
+	}
+}
