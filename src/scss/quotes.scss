@@ -22,7 +22,7 @@
 			}
 
 			@media (max-width: 768px) {
-				max-width: 100%;
+				max-width: 768px;
 				max-height: 100%;
 			}
 
@@ -43,6 +43,8 @@
 			}
 
 			@media (max-width: 768px) {
+				max-width: 768px;
+				display: block;
 				padding: 23px 25px 102px 20px;
 			}
 

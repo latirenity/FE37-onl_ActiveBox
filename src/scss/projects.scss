@@ -31,7 +31,7 @@
 		&:hover:before {
 			position: absolute;
 			content: "PROJECT NAME";
-			padding-top: 128px;
+			padding-top: 33.86%;
 			text-align: center;
 			color: $white;
 			font-style: normal;
@@ -44,13 +44,23 @@
 			bottom: 0;
 			left: 0;
 			z-index: 1;
+
+			@media (max-width: 1200px) {
+				padding-top: 37.98%;
+				font-size: 18px;
+				line-height: 21px;
+			}
+
+			@media (max-width: 768px) {
+				padding-top: 31.875%;
+			}
 		}
 
 		&:hover:after {
 			position: absolute;
 			content: "User Interface Design";
 			text-align: center;
-			padding-top: 191px;
+			padding-top: 50.52%;
 			color: $white;
 			font-style: normal;
 			font-weight: 400;
@@ -62,6 +72,16 @@
 			bottom: 0;
 			cursor: pointer;
 			z-index: 1;
+
+			@media (max-width: 1200px) {
+				padding-top: 49.61%;
+				font-size: 14px;
+				line-height: 16px;
+			}
+
+			@media (max-width: 768px) {
+				padding-top: 48.125%;
+			}
 		}
 	}
 }

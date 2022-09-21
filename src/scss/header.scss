@@ -28,16 +28,97 @@
 			display: flex;
 			width: 181px;
 			height: 26px;
+
+			@media (max-width: 768px) {
+				width: 102px;
+				height: 16px;
+			}
+		}
+	}
+
+	&-burger {
+		display: none;
+
+		@media (max-width: 768px) {
+			display: block;
+			position: relative;
+			width: 24px;
+			height: 19px;
+			top: 19px;
+			right: 15px;
+
+			& span {
+				position: absolute;
+				background-color: #FFFFFF;
+				height: 3px;
+				width: 100%;
+				left: 0;
+				top: 8px;
+				transition: 0.1s;
+			}
+
+			&.active span {
+				transform: scale(0);
+			}
+
+			&:before,
+			&:after {
+				position: absolute;
+				content: "";
+				background-color: #FFFFFF;
+				width: 100%;
+				height: 3px;
+				left: 0;
+				transition: 0.3s;
+			}
+
+			&:before {
+				top: 0px;
+			}
+
+			&:after {
+				bottom: 0px;
+			}
+
+			&.active:before {
+				transform: rotate(405deg);
+				top: 8px;
+			}
+
+			&.active:after {
+				transform: rotate(315deg);
+				bottom: 8px;
+			}
 		}
 	}
 
 	&-nav {
 		display: block;
 		max-width: 670px;
+		transition: 0.3s;
+
+		@media (max-width: 768px) {
+			position: fixed;
+			max-width: 100%;
+			// width: 100%;
+			height: 100%;
+			top: 62px;
+			left: -100%;
+		}
+
+		&.active {
+			left: 0;
+			right: 0;
+		}
 
 		&_list {
 			display: flex;
 			width: 100%;
+
+			@media (max-width: 768px) {
+				display: block;
+				padding: 0 20px;
+			}
 		}
 
 		&_item a {
@@ -60,10 +141,16 @@
 				line-height: 14px;
 			}
 
-
-			// BURGER
 			@media (max-width: 768px) {
-				display: none;
+				text-align: center;
+				width: 100%;
+				font-size: 13px;
+				line-height: 15px;
+				padding: 25px 0;
+			}
+
+			@media (max-width: 368px) {
+				text-align: start;
 			}
 
 			&:hover:before {

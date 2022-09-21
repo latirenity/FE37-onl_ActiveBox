@@ -22,6 +22,14 @@
 			padding: 69px 0 52px 0;
 		}
 
+		&.active {
+
+			@media (max-width: 768px) {
+				visibility: hidden;
+			}
+
+		}
+
 		&_title h1 {
 			color: $white;
 			text-align: center;
@@ -93,7 +101,7 @@
 				font-size: 24px;
 				line-height: 28px;
 				padding: 26px 0;
-				transition: 0.3s;
+				transition: 0.1s;
 
 				&:hover {
 					background: $bg-darkred;
